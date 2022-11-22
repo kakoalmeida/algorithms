@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     /* Utilizando um vetor generico
@@ -7,30 +10,24 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Lista<Integer> vetorInteiros = new Lista<>(5);
-        Lista<String> vetorString = new Lista<>(5);
-        Lista<Double> vetorDouble = new Lista<>(5);
+        Lista<String> lista = new Lista<>(5);
 
-        vetorString.adiciona("Morango");
-        vetorInteiros.adiciona(1);
-        vetorInteiros.adiciona(0, 2);
-        vetorString.adiciona("Banana");
-        vetorDouble.adiciona(2.5);
-        vetorInteiros.adiciona(0, 3);
-        vetorInteiros.adiciona(0, 4);
-        vetorInteiros.adiciona(0, 5);
-        vetorString.adiciona("Abacaxi");
-        vetorString.adiciona("Uva");
-        vetorString.adiciona("Açai");
-        vetorInteiros.adiciona(0);
+        lista.adiciona("Banana");
+        lista.adiciona("Apple");
+        lista.adiciona("Orange");
+        lista.adiciona("Grape");
+        lista.adiciona("Watermelon");
+        lista.adiciona("Peach");
 
-        System.out.println(vetorInteiros);
-        System.out.println(vetorString);
-        System.out.println(vetorDouble);
-        System.out.println(vetorString.getTamanho());
-        System.out.println(vetorInteiros.getTamanho());
-        System.out.println(vetorDouble.getTamanho());
-        System.out.println(vetorInteiros.contemItem(6));
+        System.out.println(lista);
 
+        lista.remover("Grape");
+
+        System.out.println(lista);
+
+        System.out.println(lista.buscaElemento("Watermelon"));
+        System.out.println(lista.obter(2));
+        lista.removerTodos();
+        System.out.println(lista);
     }
 }
