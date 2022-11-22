@@ -1,3 +1,5 @@
+import java.io.ObjectStreamException;
+
 public class Lista<T> {
 
     /* Operador diamond '<>' usa para poder definir o tipo
@@ -66,6 +68,9 @@ public class Lista<T> {
         return -1;
     }
 
+    public T obter(int posicao){
+        return this.busca(posicao);
+    }
     // Para remover itens do vetor
     public void removeItem(int posicao){
         if(!(posicao >= 0 && posicao < tamanho)) {  // negacao caso nao existir a posicao
@@ -75,6 +80,17 @@ public class Lista<T> {
             this.elementos[i] = this.elementos[i+1];
         }
         this.tamanho--;
+    }
+
+    public void remover(T elemento){
+        int pos = this.buscaElemento(elemento);
+        if(pos > -1){
+            this.removeItem(pos);
+        }
+    }
+
+    public void removerTodos(){
+        this.elementos = (T[]) new Object[this.elementos.length];
     }
 
     public boolean contemItem(T elemento){
