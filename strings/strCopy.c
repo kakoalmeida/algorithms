@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-//Escreva um c�digo-fonte para copiar uma vari�vel string para outra vari�vel string.
+//Escreva um codigo-fonte para copiar uma variavel string para outra variavel string.
 
 #define LENGTH 50
 
