@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-//Escreva um código-fonte para copiar uma variável string para outra variável string.
+//Escreva um cï¿½digo-fonte para copiar uma variï¿½vel string para outra variï¿½vel string.
 
 #define LENGTH 50
 
@@ -16,6 +16,7 @@ int main(){
     for(i = 0; str[i] != '\0'; i++){
         new_str[i] = str[i];
     }
+    new_str[i] = '\0';
 
     printf("original: %s", str);
     printf("\ncopia: %s", new_str);
